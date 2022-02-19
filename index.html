@@ -37,6 +37,7 @@
 	<h1 id="pop"></h1>
 	<script>	
 		let n = prompt("Decimal : ");
+		let go = n;
 		let tool = "";
 		for (var i = n; i > 0; i--) {
 			let m = n % 2;
@@ -47,7 +48,7 @@
 				break;
 			}
 		}
-		document.getElementById("pop").innerHTML = tool;
+		document.getElementById("pop").innerHTML = `Binary of ${go} is \n `+ tool;
 	</script>
 
 	
