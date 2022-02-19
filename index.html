@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<title>	</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		h1{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			min-width: 100px;
+			padding: 100px;
+			background: tomato;
+			color: #fff;
+			border-radius: 10px;
+
+		}
+	</style>
+</head>
+<body>
+	
+	<h1 id="pop"></h1>
+	<script>	
+		let n = prompt("Decimal : ");
+		let tool = "";
+		for (var i = n; i > 0; i--) {
+			let m = n % 2;
+			tool = tool + m;
+			n = Math.floor(n / 2);
+			if (n === 0) {
+				tool = tool.split("").reverse().join("");
+				break;
+			}
+		}
+		document.getElementById("pop").innerHTML = tool;
+	</script>
+
+	
+</body>
+</html>
